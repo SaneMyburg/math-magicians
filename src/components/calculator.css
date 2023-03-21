@@ -1,7 +1,50 @@
+:root {
+  --primary: #d38b50;
+  --secondary: rgb(184, 184, 184);
+  --light: #eee;
+  --digit-width: 25px;
+}
+
 * {
-  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: var(--light);
 }
 
 .App {
-  width: 24vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  padding: 16px;
+  text-align: right;
+  background-color: var(--secondary);
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: 50%;
+}
+
+.digits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.operation {
+  background-color: var(--primary);
+  padding: 20% 40px;
+}
+
+.zero {
+  width: calc(6 * var(--digit-width));
 }
