@@ -2,7 +2,11 @@ import PropTypes from 'prop-types';
 
 const CreateDigits = (props) => {
   const { digits } = props;
-  return <div className="digits">{digits}</div>;
+  return (
+    <button className="digits" type="button">
+      {digits}
+    </button>
+  );
 };
 
 function Calculator() {
