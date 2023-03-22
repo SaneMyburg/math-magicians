@@ -1,0 +1,69 @@
+:root {
+  --primary: #d38b50;
+  --secondary: rgb(148, 145, 145);
+  --light: #d7d7d7;
+  --digit-width: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 25%;
+  max-width: 700px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  padding: 16px;
+  text-align: right;
+  background-color: var(--secondary);
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: 43%;
+  color: white;
+}
+
+.digits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 50px;
+  background-color: var(--light);
+  border: var(--light) solid 2px;
+}
+
+.digit:nth-last-child(3) {
+  grid-row-start: 5;
+  grid-column: 1 / span 2;
+}
+
+.operation {
+  background-color: var(--primary);
+}
+
+.zero {
+  width: calc(6 * var(--digit-width));
+}
+
+button {
+  background-color: var(--light);
+  border-color: white;
+}
+
+.dot {
+  font-size: 15px;
+}
