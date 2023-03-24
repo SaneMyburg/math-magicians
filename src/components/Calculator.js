@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './calculator.css';
 import PropTypes from 'prop-types';
 import calculate from '../Logic/calculate';
+import QuoteDisplay from './quotes';
 
 const CreateDigits = (props) => {
   const { digits, className, handleClick } = props;
@@ -83,12 +84,15 @@ function Calculator() {
           handleClick={handleClick}
         />
       </div>
+      <div className="quotes">
+        <QuoteDisplay />
+      </div>
     </div>
   );
 }
 
 CreateDigits.propTypes = {
-  digits: PropTypes.number.isRequired,
+  digits: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
