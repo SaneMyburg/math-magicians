@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './calculator.css';
 import PropTypes from 'prop-types';
 import calculate from '../Logic/calculate';
+import QuoteDisplay from './quotes';
 
 const CreateDigits = (props) => {
   const { digits, className, handleClick } = props;
@@ -26,6 +27,9 @@ function Calculator() {
   const handleClick = (buttonName) => {
     setData(calculate(data, buttonName));
   };
+
+  // const category = 'inspirational';
+  // const apiKey = 'Ts3DsEKJEWz1h/mZb5Vq1w==fLTigDUcx1O7ndJT';
 
   return (
     <div className="App">
@@ -82,6 +86,9 @@ function Calculator() {
           className="digit operation"
           handleClick={handleClick}
         />
+      </div>
+      <div className="quotes">
+        <QuoteDisplay />
       </div>
     </div>
   );
