@@ -28,9 +28,6 @@ function Calculator() {
     setData(calculate(data, buttonName));
   };
 
-  // const category = 'inspirational';
-  // const apiKey = 'Ts3DsEKJEWz1h/mZb5Vq1w==fLTigDUcx1O7ndJT';
-
   return (
     <div className="App">
       <div className="screen">{data.next || data.total || '0'}</div>
@@ -95,7 +92,7 @@ function Calculator() {
 }
 
 CreateDigits.propTypes = {
-  digits: PropTypes.number.isRequired,
+  digits: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
 };

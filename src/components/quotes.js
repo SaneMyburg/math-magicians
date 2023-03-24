@@ -20,7 +20,6 @@ function QuoteDisplay() {
         }
         const data = await response.json();
         setQuote(data);
-        console.log(data);
         if (data.length === 0) {
           throw new Error('No quotes found');
         }
