@@ -1,5 +1,9 @@
-import Calculator from '../components/Calculator';
+import Header from '../components/Header';
 
-const Home = () => <Calculator />;
+const Home = () => (
+  <div>
+    <Header />
+  </div>
+);
 
 export default Home;

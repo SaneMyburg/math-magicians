@@ -30,11 +30,11 @@ function QuoteDisplay() {
     }
     fetchQuote();
   }, []);
-  if (error) return <div>Something went wrong!</div>;
+  if (error) return <div className="loading">Something went wrong!</div>;
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="loading">Loading...</div>;
   return (
-    quote.map((data) => <p key={0}>{data.quote}</p>)
+    quote.map((data) => <p className="quote" key={0}>{data.quote}</p>)
   );
 }
 

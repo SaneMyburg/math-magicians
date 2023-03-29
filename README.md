@@ -198,8 +198,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Make simple calculations**
-- [ ] **Read a random math-related quote**
 - [ ] **Testing with Jest**
 
 <!-- CONTRIBUTING -->
